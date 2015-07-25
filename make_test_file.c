@@ -64,10 +64,10 @@ int   main()
 
         component_tab[0].type = TRUE;
         component_tab[0].id = 45;
-        strcat(component_tab[0].name, "yes");
+        strcpy(component_tab[0].name, "yes");
 
         lib_tab[0].id_type = 67;
-        strcat(lib_tab[0].libraryNameAndPath, "libtest.so");
+        strcpy(lib_tab[0].libraryNameAndPath, "libtest.so");
         /*
          *  END OF INIT
          */
@@ -78,8 +78,8 @@ int   main()
 
         fwrite(link_tab, sizeof(struct link), LINK_NB, link_file);
         fclose(link_file);
-        fwrite(compo_file, sizeof(struct component), COMPONENT_NB, compo_file);
+        fwrite(component_tab, sizeof(struct component), COMPONENT_NB, compo_file);
         fclose(compo_file);
-        fwrite(lib_file, sizeof(struct componentLibrary), LIB_NB, lib_file);
+        fwrite(lib_tab, sizeof(struct componentLibrary), LIB_NB, lib_file);
         fclose(lib_file);
 }
