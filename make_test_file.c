@@ -43,7 +43,7 @@ struct componentLibrary
 #define COMPONENT_NB 1
 #define LIB_NB 1
 
-#define LIB_FILE "componentLibrairy"
+#define LIB_FILE "componentLibrary"
 #define COMPONENT_FILE "componentsFile"
 #define LINK_FILE "linksFile"
 
