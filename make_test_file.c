@@ -40,8 +40,8 @@ struct componentLibrary
 };
 
 #define LINK_NB 1
-#define COMPONENT_NB 1
-#define LIB_NB 1
+#define COMPONENT_NB 7
+#define LIB_NB 3
 
 #define LIB_FILE "componentLibrary"
 #define COMPONENT_FILE "componentsFile"
@@ -57,17 +57,12 @@ int   main()
         /*
          *  INIT STRUCTURES
          */
-        link_tab[0].idComponent0 = 12;
-        link_tab[0].pinComponent0 = 56;
-        link_tab[0].idComponent1 = 56;
-        link_tab[0].pinComponent1 = 78;
-
-        component_tab[0].type = TRUE;
-        component_tab[0].id = 45;
-        strcpy(component_tab[0].name, "yes");
-
-        lib_tab[0].id_type = 67;
-        strcpy(lib_tab[0].libraryNameAndPath, "libtest.so");
+        lib_tab[0].id_type = OR;
+        strcpy(lib_tab[0].libraryNameAndPath, "dynamic_lib/libor.so");
+        lib_tab[1].id_type = NAND;
+        strcpy(lib_tab[1].libraryNameAndPath, "dynamic_lib/libnand.so");
+        lib_tab[2].id_type = NXOR;
+        strcpy(lib_tab[2].libraryNameAndPath, "dynamic_lib/libxnor.so");
         /*
          *  END OF INIT
          */
